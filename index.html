@@ -7,9 +7,52 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./Src/CSS/reset.css">
+    <link rel="stylesheet" href="./Src/CSS/style.css">
     <title>Comix Shop</title>
 </head>
 <body>
-    
+    <header>
+        <h1>Comix Shop</h1>
+        <nav>
+            <ul>
+                <li>Todos</a></li>
+                <li>Mangás</a></li>
+                <li>HQs</a></li>
+                <li>Gibis</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <aside>
+            <form>
+                <input type="text" id="text" placeholder = "Digite aqui sua busca">
+                <button type="button">Pesquisar</button>
+            </form>
+
+            <ul class="container" id="showcase"></ul>
+
+            <div class="cart-main">
+                <div class="cart-top">
+                    <h2>Carrinho</h2>
+                </div>
+
+                <div class="empty-cart">
+                    <h2>Carrinho Vazio</h2>
+                </div>
+
+                <div class="cart-base">
+                    <div class="centralize-info">
+                        <h3>Quantidade:</h3>
+                        <span>Total:</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <script src="./Src/JS/database.js"></script>
+    <script src="./Src/JS/main.js"></script>
 </body>
 </html>
