@@ -4,18 +4,24 @@
     --gray-2: #76777c;
     --blue-1: #edf9ff;
     --blue-2: #9ad3ff;
+    --blue-3: #74bef3;	
     --font-inter: 'Inter', sans-serif;
 }
 
 body{
     font-family: var(--font-inter);
     background-color: var(--gray);
+    overflow-x: hidden
+}
+
+main{
+    padding-top: 20px;
 }
 
 header{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     padding: 10px;
     background-color: var(--white);
 }
@@ -23,11 +29,13 @@ header{
 h1{
     font-size: 18px;
     font-weight: 600;
+    text-align: center;
+    padding-bottom: 10px;
 }
 
 ul{
     display: flex;
-    gap: 10px;
+    gap: 30px;
     cursor: pointer;
 }
 
@@ -35,7 +43,14 @@ form{
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px;
+    padding-top: 20px;
+}
+
+.form-mobile{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
 }
 
 input{
@@ -44,6 +59,7 @@ input{
     border: none;
     border-radius: 4px 0 0 4px;
     background-color: var(--white);
+    outline: 0;
 }
 
 #text{
@@ -57,6 +73,11 @@ button{
     color: var(--white);
     background-color: var(--blue-2);
     border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: var(--blue-3);
 }
 
 .cart-main{
@@ -64,6 +85,7 @@ button{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    padding-top: 20px;
 }
 
 .cart-top{
@@ -89,10 +111,6 @@ button{
 .cart-base{
     width: 270px;
     height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-direction: row;    
     color: var(--white);
     background-color: var(--blue-2);
     border-radius: 0 0 4px 4px;
@@ -102,7 +120,182 @@ button{
     display: flex;
     flex-direction: column;
     gap: 5px;
+    padding-top: 5px;
     padding-left: 10px;
 }
 
+.product-img{
+    width: 260px;
+    height: 360px;
+    border-radius: 8px 8px 0 0;
+}
 
+.container{
+    width: 100vw;
+    overflow-x: scroll;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.box-item{
+    width: 260px;
+    height: 570px; 
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 8px;
+    background-color: var(--white);
+}
+
+.product-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5px;
+    padding-left: 15px;
+}
+
+.product-item{
+    font-weight: 600;
+}
+
+.product-item, .product-description, .product-price{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.add-cart{
+    width: 230px;
+    border-radius: 4px;
+}
+
+.cart-ul{
+    display: flex;
+    flex-direction: column;
+    cursor: auto;
+    background-color: var(--white);
+    gap: 5px;
+}
+
+.list-items{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.item-cart{
+    width: 270px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--white);
+    border: none;
+}
+
+.img-cart{
+    width: 140px;
+    height: 160px;
+    border: none;
+}
+
+.centralize-cart{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 270px;
+}
+
+.centralize-text-cart{
+    min-width: 98px;
+    max-width: 98px;
+}
+
+.name-cart, .price-cart, .tag-cart{
+    display: flex;
+    padding: 10px;
+    padding-left: 25px;
+}
+
+.remove-cart{
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+}
+
+.centralize-amount, .centralize-total{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 10px;
+}
+
+@media only screen and (min-width: 1023px) {
+    body{
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    header{
+        width: 100%;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    h1{
+        padding-top: 10px;
+    } 
+
+    .centralize-header{
+        gap: 790px;
+        max-width: 1400px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .container{
+        width: 65%;
+        display: flex;
+        overflow-x: hidden;
+        flex-wrap: wrap;
+    }
+
+    main{
+        max-width: 1400px;
+        min-width: 1400px;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    aside{
+        display: flex;
+        flex-direction: column;
+    }
+
+    form{
+        display: flex;
+        justify-content: flex-end;
+        padding: 0;
+    }
+
+    .cart-main{
+        display: flex;
+        align-items: flex-end;
+        padding-top: 20px;
+    }
+
+    .form-mobile{
+        display: none;
+    }
+}
