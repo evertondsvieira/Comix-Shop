@@ -13,45 +13,51 @@
 </head>
 <body>
     <header>
-        <h1>Comix Shop</h1>
-        <nav>
-            <ul>
-                <li>Todos</a></li>
-                <li>Mangás</a></li>
-                <li>HQs</a></li>
-                <li>Gibis</a></li>
-            </ul>
-        </nav>
+        <div class="centralize-header">
+            <h1>Comix Shop</h1>
+            <nav>
+                <ul>
+                    <li class="filterAll">Todos</a></li>
+                    <li class="filterManga">Mangás</a></li>
+                    <li class="filterHq">HQs</a></li>
+                    <li class="filterGibi">Gibis</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
-        <aside>
-            <form>
-                <input type="text" id="text" placeholder = "Digite aqui sua busca">
-                <button type="button">Pesquisar</button>
+        <ul class="container" id="showcase"></ul>
+        
+        <aside>          
+            <form autocomplete="off">
+                <input class="filter-search" type="text" id="text" placeholder = "Digite aqui sua busca">
+                <button type="button" class="input-button">Pesquisar</button>
             </form>
-
-            <ul class="container" id="showcase"></ul>
-
+            
             <div class="cart-main">
                 <div class="cart-top">
                     <h2>Carrinho</h2>
                 </div>
 
-                <div class="empty-cart">
-                    <h2>Carrinho Vazio</h2>
-                </div>
+                <ul class="cart-ul" id="list-items"></ul>
 
-                <div class="cart-base">
+                <div class="cart-base" id="cart-base-id">
                     <div class="centralize-info">
-                        <h3>Quantidade:</h3>
-                        <span>Total:</span>
+                        <div class="centralize-amount">
+                            <h3>Quantidade:</h3>
+                            <h3 id="amount-num"></h3>
+                        </div>
+
+                        <div class="centralize-total">
+                            <span>Total:</span>
+                            <span id="total-num"></span>
+                        </div>
                     </div>
                 </div>
             </div>
         </aside>
     </main>
-
     <script src="./Src/JS/database.js"></script>
     <script src="./Src/JS/main.js"></script>
 </body>
