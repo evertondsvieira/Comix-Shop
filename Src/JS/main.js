@@ -124,7 +124,7 @@ function showCart(listCartData){
         const totalNum = document.getElementById("total-num")
         
         amountNum.innerHTML = `${originalCart.length}`
-        totalNum.innerText = `${sumItems(listCartData).toFixed(2)}`
+        totalNum.innerText = `R$ ${sumItems(listCartData).toFixed(2)}`
     }
 }
 
