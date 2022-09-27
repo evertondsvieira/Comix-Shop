@@ -124,7 +124,10 @@ function showCart(listCartData){
         const totalNum = document.getElementById("total-num")
         
         amountNum.innerHTML = `${originalCart.length}`
-        totalNum.innerText = `R$ ${sumItems(listCartData).toFixed(2)}`
+        totalNum.innerText = `${sumItems(listCartData).toLocaleString("pt-BR", {
+            style: "currency",
+            currency: "BRL",
+        })}`
     }
 }
 
